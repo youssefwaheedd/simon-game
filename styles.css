@@ -96,7 +96,7 @@ body > .btn {
     font-size: 1rem;
     margin: 10px;
     height: auto;
-    width: 30%;
+    width: auto;
     background-color: #39638f;
     border: 10px solid #39638f;
     border-radius: 30px;

@@ -20,27 +20,26 @@ img {
 
 .container {
   display: block;
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
-.btn {
+.flex-box > div {
   margin: 25px;
-  display: inline-block;
   height: 200px;
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
 }
 
-body > .btn {
+.container > .btn {
   font-size: 2rem;
-  margin: 25px;
   height: auto;
   width: 30%;
   background-color: #39638f;
   border: 10px solid #39638f;
   border-radius: 30px;
+  margin: 0%;
 }
 
 .gameOver {
@@ -63,13 +62,37 @@ body > .btn {
 .yellow {
   background-color: yellow;
 }
+/* Prevent background color change on hover */
+.green:hover {
+  background-color: green !important;
+  border-color: black !important;
+}
+.red:hover {
+  background-color: red !important;
+  border-color: black !important;
+}
+.yellow:hover {
+  background-color: yellow !important;
+  border-color: black !important;
+}
+.blue:hover {
+  background-color: blue !important;
+  border-color: black !important;
+}
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
 
-@media (max-width: 600px) {
+.flex-box {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
   .game-header {
     height: 20vh;
   }
@@ -79,7 +102,7 @@ body > .btn {
     margin: 5%;
     color: #fef2bf;
   }
-  .btn {
+  .flex-box > div {
     margin: 15px;
     display: inline-block;
     height: 100px;
@@ -92,13 +115,28 @@ body > .btn {
     width: 100px;
     border-radius: 50px;
   }
-  body > .btn {
+  .container > .btn {
     font-size: 1rem;
-    margin: 10px;
-    height: auto;
+    margin-top: 50px;
+    height: auto !important;
     width: auto;
     background-color: #39638f;
     border: 10px solid #39638f;
     border-radius: 30px;
+    padding: 0 20px;
+  }
+  .container {
+    width: auto;
+  }
+}
+/* Media query for screens between 768px and 1000px */
+@media (min-width: 413px) and (max-width: 1000px) {
+  .flex-box > div {
+    margin: 15px;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 10px solid black;
+    border-radius: 20%;
   }
 }

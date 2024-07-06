@@ -1,5 +1,5 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
-var currentLevel = 0;
+var currentLevel;
 var gamePattern = [];
 var userClickedPattern = [];
 var gameInProgress = false;
@@ -15,7 +15,7 @@ $("#startButton").click(function () {
   gameInProgress = true;
 });
 
-$("div.btn").click(function () {
+$(".flex-box > div").click(function () {
   if (!gameInProgress) {
     return;
   }
